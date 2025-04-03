@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Kids writing Consult</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/LOGO.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar" >
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="60"></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Buy Books</a></li>
+                        <li><a href="">Partnership</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+                <a href="mailto:davidduahkwc@gmail.com"><img src="images/g-icon.png" width="30px" height="30px"></a>
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+
+            </div>
+
+        </div>
+        </div>
+
+    <!-- --------------------- account page -----------------  -->
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/asdd.png" width="90%" style="margin-left: 3%;">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Get In Touch</span>
+                            <span onclick="register()">Google Location</span>
+                            <hr id="Indicator">
+                        </div>
+
+                        <form id="LoginForm">
+                            <b>Phone</b>
+                            <button  class="btn">
+                                <a href="tel:+233248032711" style="color: white;">+233 24 803 2711</a>
+                            </button>
+                            <hr><br>
+                            <b>Emails:</b>
+                            <button  class="btn">info@kidswritingconsult.com</button>
+                            <button  class="btn">davidduahkwc@gmail.com</button>
+                            <hr><br>
+                            <b>Location:</b>
+                            <button  class="btn">Accra, Ghana</button>
+                        </form>
+                        
+                        <form id="RegForm">
+                            <a href="https://maps.app.goo.gl/eJBzwffdXJP9Y1S27"><img src="images/location.jpg" alt="" style="width: 200px; "></a>
+                            <button  class="btn">Click the image to View</button>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------------------ footer ----------------  -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <center>
+                        <img src="images/LOGO.png" width="100px">
+                    
+                        
+                        <a href="" style="text-decoration: none; margin-left: 2%;">
+                            <h3 style="color: rgb(199, 199, 0);">View our Google Business Profile</h3>
+                        </a>
+                    </center>             
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/mission.png" style="border-radius: 100px;">
+                    <p>
+                        Our Purpose is to inspires students to express <br>themselves 
+                        and enhances their writing skills. 
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <a href="" style="text-decoration: none; "><li>Latest Books</li></a>
+                        <a href="" style="text-decoration: none; "><li>Contact Us</li></a>
+                        <a href="" style="text-decoration: none; "><li>Review Us</li></a>
+                        <a href="" style="text-decoration: none; "><li>Join Affiliate</li></a>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <a href="" style="text-decoration: none; "><li>Youtube</li></a>
+                        <a href="" style="text-decoration: none; "><li>Facebook</li></a>
+                        <a href="" style="text-decoration: none; "><li>Instagram</li></a>
+                        <a href="" style="text-decoration: none; "><li>Tiktok</li></a>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright"> Copytight 2024 - Kids Writing Consult. All Rights Reserved<br>
+                Developed by <a href="https://israelnarbi.github.io/Belykweb-Solutions/" style="text-decoration: none; color: rgb(230, 230, 0);">Belykweb Solutions</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- ------------ js for toggle menu -----------  -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+    <!-- -----------------js for the toggle form ---------------  -->
+
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+
+</body>
+
+</html>
